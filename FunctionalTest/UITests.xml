@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0e366916-78e1-4074-a6e5-86a6735edfb9" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="UITests" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0e366916-78e1-4074-a6e5-86a6735edfb9fileName">UITests</con:setting>
+  </con:settings>
+  <con:testStep type="tcintegrationteststep" name="TestComplete" id="a2342554-0c74-460e-9627-cf7b07cd41b8">
+    <con:settings/>
+    <con:config>
+      <timeout/>
+      <executionResult>0</executionResult>
+      <resultDescription>An exception occurred while running TestComplete (or TestExecute)</resultDescription>
+      <testRunner>TestComplete 15</testRunner>
+      <runMode/>
+      <exportTestLog/>
+      <silentModeLog/>
+      <projectSuiteFile>\\Mac\Home\Documents\TestComplete 15 Projects\UITestProject\UITestProject.pjs</projectSuiteFile>
+      <projectName/>
+      <scriptUnit/>
+      <scriptRoutine/>
+      <silentMode>false</silentMode>
+      <showTestLog>false</showTestLog>
+      <warningAsError>false</warningAsError>
+      <test/>
+      <otherTest/>
+      <otherArgs/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,10 @@
+https%3A%2F%2Fsupervillain.herokuapp.com\gentoken.xml
+https%3A%2F%2Fsupervillain.herokuapp.com\verifytoken.xml
+https%3A%2F%2Fsupervillain.herokuapp.com\register.xml
+https%3A%2F%2Fsupervillain.herokuapp.com\login.xml
+https%3A%2F%2Fsupervillain.herokuapp.com\user.xml
+FunctionalTest\Gen%26VerifyToken.xml
+FunctionalTest\TC01_UserRegister%26Login.xml
+FunctionalTest\UserLeaderboard.xml
+FunctionalTest\ManageUser.xml
+FunctionalTest\UITests.xml

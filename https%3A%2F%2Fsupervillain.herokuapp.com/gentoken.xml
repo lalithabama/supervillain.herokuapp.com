@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="gentoken" path="/auth/gentoken" id="07b8641b-bf1f-456d-a9a8-d1b1ea46f818" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="07b8641b-bf1f-456d-a9a8-d1b1ea46f818fileName">gentoken</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="0e47fb60-6305-45d6-ab8e-71365a4b1333" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:gen="https://supervillain.herokuapp.com/auth/gentoken">gen:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:gen="https://supervillain.herokuapp.com/auth/gentoken">gen:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="b63b0e19-13c6-4be5-b724-2ecda08339ef" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request>{
+  "key": "crazyFrog",
+  "email": "crazyFrog@yopmail.com"
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

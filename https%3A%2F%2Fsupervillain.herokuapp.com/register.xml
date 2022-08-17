@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="register" path="/auth/user/register" id="ab5384c3-2518-48fd-a4a5-cc19d41f3fde" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ab5384c3-2518-48fd-a4a5-cc19d41f3fdefileName">register</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="c2001671-703e-4995-9f3c-5c5bc725048e" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:reg="https://supervillain.herokuapp.com/auth/user/register">reg:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="7e352051-268f-454f-adcc-db9b9667fbae" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

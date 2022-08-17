@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cff146d3-b1f1-47ce-a05a-8437a3cd9669" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TC01_UserRegister&amp;Login" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cff146d3-b1f1-47ce-a05a-8437a3cd9669fileName">TC01_UserRegister%26Login</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="RegisterUser" id="704e1ca2-02b3-4a73-af09-67de2523190b">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/auth/user/register" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="RegisterUser" id="7e352051-268f-454f-adcc-db9b9667fbae" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request>{
+  "username": "Test9",
+  "password": "Test7"
+}</con:request>
+        <con:originalUri>https://supervillain.herokuapp.com/auth/user/register</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="744eb264-cfe1-40fe-bef4-b811b4e9d0f1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="UserLogin" id="2391bf6b-fb2d-4cfa-b5b0-2c679d3e32d2">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/auth/user/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="UserLogin" id="88083227-1bba-4d15-a7af-2fb872de9483" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request>{
+  "username": "Test7",
+  "password": "Test7"
+}</con:request>
+        <con:originalUri>https://supervillain.herokuapp.com/auth/user/login</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6e99ca21-2485-4a95-aff2-4cb391b0b03e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

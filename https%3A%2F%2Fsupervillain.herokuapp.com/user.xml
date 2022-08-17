@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="user" path="/v1/user" id="0458392e-ca7e-49f9-80a2-3eafa16c8d84" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0458392e-ca7e-49f9-80a2-3eafa16c8d84fileName">user</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="Get User details" path="{name}" id="55550f12-fb8a-42ac-b86a-4dfe89d733c1">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>name</con:name>
+        <con:value>name</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>name</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="e4ae8622-12fc-416a-badf-c5f1dc4d2e91" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:representation type="FAULT">
+        <con:mediaType>application/json; charset=utf-8</con:mediaType>
+        <con:status>403</con:status>
+        <con:params/>
+        <con:element xmlns:tes="https://supervillain.herokuapp.com/v1/user/Test5">tes:Fault</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="d56a0455-5afc-41dc-a019-59570b2d2c3f" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value="test4"/>
+        </con:parameters>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:method name="list the users" id="b3d2a99a-5cc3-4949-89f3-66a349a37058" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="65e34275-ae04-4093-a674-e45b68f965b1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="add a new user" id="65f76fa2-96f7-4a3b-b7fd-731f3d83cb1a" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://supervillain.herokuapp.com/v1/user">user:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://supervillain.herokuapp.com/v1/user">user:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="030c0402-935d-4d06-886d-01b548a7c84a" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="update user" id="eb8bdbd6-ae78-4090-9eda-5d8aa887bb4d" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="c81b14cf-7a63-47a2-b63c-c636a26ba97a" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="delete user" id="5ccd860e-420f-43b7-acad-a9b2dfdbd59a" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://supervillain.herokuapp.com/v1/user">user:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="ace10d5b-686c-497c-a732-126198cb4d99" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

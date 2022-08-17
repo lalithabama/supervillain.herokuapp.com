@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="verifytoken" path="/auth/verifytoken" id="61672b38-a1b6-4afd-a5ef-971ced222099" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="61672b38-a1b6-4afd-a5ef-971ced222099fileName">verifytoken</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="0bace082-8a85-43d4-9f41-74afa94492aa" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>403</con:status>
+      <con:params/>
+      <con:element xmlns:ver="https://supervillain.herokuapp.com/auth/verifytoken">ver:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="ce58c56a-3bbd-417a-984c-bb7b82bd2d58" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

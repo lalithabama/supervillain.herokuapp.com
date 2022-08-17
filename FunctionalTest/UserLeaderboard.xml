@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1dee6c70-c785-4598-ba83-c46b47b9e963" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="UserLeaderboard" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1dee6c70-c785-4598-ba83-c46b47b9e963fileName">UserLeaderboard</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="ListUsers" id="7be7a36c-f721-45b2-88b6-50bbb0542af1">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/v1/user" methodName="list the users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="ListUsers" id="65e34275-ae04-4093-a674-e45b68f965b1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://supervillain.herokuapp.com/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="53ff13eb-7bce-49c3-936a-bafad4680a9e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="AddUser" id="a62ba6b8-9beb-4a04-8a5f-cf3627d96152">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/v1/user" methodName="add a new user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="AddUser" id="030c0402-935d-4d06-886d-01b548a7c84a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request>{
+  "username": "Test9",
+  "score": 83
+}</con:request>
+        <con:originalUri>https://supervillain.herokuapp.com/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="113812cb-bc12-455d-9e24-4f4ce80049af" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="4b2ab12e-d8c3-46ba-91cf-fed1364c5eb3" name="Match content of [status]">
+          <con:configuration>
+            <path>$['status']</path>
+            <content>"success"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="eae7d76a-80a5-470d-9a5a-a286727609a0" name="Match content of [message]">
+          <con:configuration>
+            <path>$['message']</path>
+            <content>"User added."</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="UpdateUser" id="87c77cfe-36f8-4429-8556-1be988a3a61c">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/v1/user" methodName="update user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="UpdateUser" id="c81b14cf-7a63-47a2-b63c-c636a26ba97a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request>{
+  "username": "aaaaaaaaaa",
+  "score": 100
+}</con:request>
+        <con:originalUri>https://supervillain.herokuapp.com/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0fa09452-c274-42bb-8786-9508ded995d6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="DeleteUser" id="deb50176-451d-43b5-aa0c-a502cb386391">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/v1/user" methodName="delete user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="DeleteUser" id="ace10d5b-686c-497c-a732-126198cb4d99" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="delete-key" value="eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJMYWxpdGhhIiwiZW1haWwiOiJsYWxpdGhhYjMwQGdtYWlsLmNvbSIsImlhdCI6MTY2MDcyNjA4OCwiZXhwIjoxNjYwOTg1Mjg4fQ.hmX-aBntXujnGri6QwfNk2flNflMy5Ix3Nx-X7UdpH1ivjxakX-7pM3PckWA9PWHo4lwVGvwqklDfTjR3bO5zg" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://supervillain.herokuapp.com/v1/user</con:originalUri>
+        <con:assertion type="JsonPath Match" id="8b0b7ac7-63b8-452e-ae38-3b88041ae12a" name="Match content of [error]">
+          <con:configuration>
+            <path>$['error']</path>
+            <content>"unable to authenticate key"</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

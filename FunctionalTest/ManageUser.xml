@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e0239873-b7aa-4ea8-b540-24163d897a43" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ManageUser" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e0239873-b7aa-4ea8-b540-24163d897a43fileName">ManageUser</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="86adf813-51e0-418b-8ffb-e6483fbf0c54">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/v1/user/{name}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="d56a0455-5afc-41dc-a019-59570b2d2c3f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://supervillain.herokuapp.com/v1/user/Test5</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5cd6cd61-5513-4f6c-845f-ebc2b4009817" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="9884a6c0-0d49-43b6-a7a8-5f8ef2a6a673" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value="TestApp2"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

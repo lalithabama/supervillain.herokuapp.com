@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="0ae4698b-a0e9-420c-994f-3c98cf9eb89f" name="FunctionalTest" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
+    <con:setting id="GeneratableJUnitReport@Folder">\\Mac\Home\Documents\LalithaBama_Docs\Reports</con:setting>
+    <con:setting id="0ae4698b-a0e9-420c-994f-3c98cf9eb89ffileName">FunctionalTest</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>AuthKey</con:name>
+      <con:value>eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJUZXN0QXBwMiIsImVtYWlsIjoibGFsaXRoYWIzMEBnbWFpbC5jb20iLCJpYXQiOjE2NjA3NjQ1NTMsImV4cCI6MTY2MTAyMzc1M30.di8ZBw9LZKRuXD14dalhyoMwkiE4v30DVW5Ebby1FVxAgXEU6wIyskPH71JZ2RUCcS32-qK_Xh8qCPtMiB74iw</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="a68e1e6a-0967-4cc8-842f-a61489fa9eaf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Gen&amp;VerifyToken" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a68e1e6a-0967-4cc8-842f-a61489fa9eaffileName">Gen%26VerifyToken</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GenToken" id="fa309dd0-9653-4ea7-812a-9bbac22d1971">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/auth/gentoken" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GenToken" id="b63b0e19-13c6-4be5-b724-2ecda08339ef" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request>{
+  "key": "TestApp4",
+  "email": "lalithab30@gmailtest.com"
+}</con:request>
+        <con:originalUri>https://supervillain.herokuapp.com/auth/gentoken</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f00cf360-3541-41df-b19e-23fb99dac492" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay" id="c883e5b1-a4a7-48db-9465-d226c6cf217a">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="VerifyToken" id="8e43f805-6bd8-4e85-89fd-95e1e684ff24">
+    <con:settings/>
+    <con:config service="https://supervillain.herokuapp.com" resourcePath="/auth/verifytoken" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="VerifyToken" id="ce58c56a-3bbd-417a-984c-bb7b82bd2d58" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="Authorization" value="${#TestSuite#AuthKey}" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://supervillain.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://supervillain.herokuapp.com/auth/verifytoken</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7d11b50d-446e-471a-919a-70125c41cb65" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
