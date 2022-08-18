@@ -7,7 +7,7 @@
     <con:setting id="ErrorDetails">true</con:setting>
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
-    <con:setting id="GeneratableJUnitReport@Folder">\\Mac\Home\Documents\LalithaBama_Docs\Reports</con:setting>
+    <con:setting id="GeneratableJUnitReport@Folder">\\Mac\Home\Documents\LalithaBama_Docs\SuperVillian-Project-readyapi-project\reports\reports-18-Aug</con:setting>
     <con:setting id="0ae4698b-a0e9-420c-994f-3c98cf9eb89ffileName">FunctionalTest</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
